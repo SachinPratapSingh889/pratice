@@ -1,0 +1,34 @@
+<p>new works!</p>
+{{parentData}}
+<br>
+<button (click)="sendingToParent()">Click Me</button>
+
+<!-- <ng-content> </ng-content> -->
+
+<!-- if we provide more than one ng content then our data will be sent to last ngcontent only to prevent this we use attribute select in ngcontent tag with value either a class or ID -->
+<!-- <div class="card">
+    <div class="card-header">
+        <ng-content select=".headingPart"></ng-content>
+    </div>
+    <div class="card-body">
+        <ng-content select=".bodyPart"></ng-content>
+    </div>
+</div> -->
+<div class="card">
+    <div class="card-header">
+        <ng-content select=".headingPart"></ng-content>
+    </div>
+    <div class="card-body">
+        <ng-content select=".bodyPart"></ng-content>
+    </div>
+</div>
+
+<p>
+    {{data}}
+
+</p>
+<ul *ngFor="let information of info">
+    <li >
+        {{information.profile}}
+    </li>
+</ul>
